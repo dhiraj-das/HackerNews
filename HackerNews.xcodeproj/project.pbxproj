@@ -14,9 +14,14 @@
 		8BB456D9206F5299005ABD00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D7206F5299005ABD00 /* LaunchScreen.storyboard */; };
 		8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E1206F5527005ABD00 /* LoginView.swift */; };
 		8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E3206F553A005ABD00 /* LoginViewController.swift */; };
+		8BB456E6206F5EFF005ABD00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456E5206F5EFF005ABD00 /* GoogleService-Info.plist */; };
+		8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E8206F6D1F005ABD00 /* AuthManager.swift */; };
+		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27F464D2443B2DC019754AE5 /* Pods-HackerNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews.release.xcconfig"; sourceTree = "<group>"; };
+		6223DFECDC5A55CC45375364 /* Pods-HackerNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB456CB206F5299005ABD00 /* HackerNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB456CE206F5299005ABD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB456D0206F5299005ABD00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,10 @@
 		8BB456DA206F5299005ABD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB456E1206F5527005ABD00 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8BB456E3206F553A005ABD00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BB456E5206F5EFF005ABD00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BB456E8206F6D1F005ABD00 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		8BB456EA206F6ED2005ABD00 /* HackerNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerNews.entitlements; sourceTree = "<group>"; };
+		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,8 @@
 			children = (
 				8BB456CD206F5299005ABD00 /* HackerNews */,
 				8BB456CC206F5299005ABD00 /* Products */,
+				D9BEA13D149630B3A3561484 /* Pods */,
+				DDF12957F0A388C73A4A6919 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,12 +70,15 @@
 		8BB456CD206F5299005ABD00 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456EA206F6ED2005ABD00 /* HackerNews.entitlements */,
+				8BB456E7206F6D00005ABD00 /* Managers */,
 				8BB456E0206F5511005ABD00 /* Login */,
 				8BB456CE206F5299005ABD00 /* AppDelegate.swift */,
 				8BB456D0206F5299005ABD00 /* ViewController.swift */,
 				8BB456D2206F5299005ABD00 /* Main.storyboard */,
 				8BB456D5206F5299005ABD00 /* Assets.xcassets */,
 				8BB456D7206F5299005ABD00 /* LaunchScreen.storyboard */,
+				8BB456E5206F5EFF005ABD00 /* GoogleService-Info.plist */,
 				8BB456DA206F5299005ABD00 /* Info.plist */,
 			);
 			path = HackerNews;
@@ -78,6 +93,31 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		8BB456E7206F6D00005ABD00 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456E8206F6D1F005ABD00 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D9BEA13D149630B3A3561484 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6223DFECDC5A55CC45375364 /* Pods-HackerNews.debug.xcconfig */,
+				27F464D2443B2DC019754AE5 /* Pods-HackerNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDF12957F0A388C73A4A6919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BB456DD206F5299005ABD00 /* Build configuration list for PBXNativeTarget "HackerNews" */;
 			buildPhases = (
+				D680ACD35241F8B1DA520158 /* [CP] Check Pods Manifest.lock */,
 				8BB456C7206F5299005ABD00 /* Sources */,
 				8BB456C8206F5299005ABD00 /* Frameworks */,
 				8BB456C9206F5299005ABD00 /* Resources */,
+				31F2232479EF66A4789D7070 /* [CP] Embed Pods Frameworks */,
+				F65CA2BC1EAADB8B5531972D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,6 +154,11 @@
 					8BB456CA206F5299005ABD00 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -138,12 +186,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB456D9206F5299005ABD00 /* LaunchScreen.storyboard in Resources */,
+				8BB456E6206F5EFF005ABD00 /* GoogleService-Info.plist in Resources */,
 				8BB456D6206F5299005ABD00 /* Assets.xcassets in Resources */,
 				8BB456D4206F5299005ABD00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31F2232479EF66A4789D7070 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D680ACD35241F8B1DA520158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackerNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F65CA2BC1EAADB8B5531972D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BB456C7206F5299005ABD00 /* Sources */ = {
@@ -154,6 +270,7 @@
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
 				8BB456D1206F5299005ABD00 /* ViewController.swift in Sources */,
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
+				8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +405,13 @@
 		};
 		8BB456DE206F5299005ABD00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6223DFECDC5A55CC45375364 /* Pods-HackerNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGQMH8WW3;
 				INFOPLIST_FILE = HackerNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.HackerNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,10 +422,13 @@
 		};
 		8BB456DF206F5299005ABD00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27F464D2443B2DC019754AE5 /* Pods-HackerNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FGQMH8WW3;
 				INFOPLIST_FILE = HackerNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dhirajdas.HackerNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";

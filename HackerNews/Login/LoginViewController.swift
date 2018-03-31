@@ -7,14 +7,32 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
     @IBOutlet var loginView: LoginView!
     
+    var authManager: AuthManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loginView.delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        authManager = AuthManager()
     }
     
+}
+
+extension LoginViewController: GIDSignInUIDelegate {}
+
+extension LoginViewController: LoginViewDelegate {
+    
+    func didTapOnPhoneAuthButton() {
+        authManager.signInWith(phoneNumber: "9706874857", fromViewController: self)
+    }
+    
+    func didTapOnGoogleAuthButton() {
+        authManager.signInWithGoogle()
+    }
 }
