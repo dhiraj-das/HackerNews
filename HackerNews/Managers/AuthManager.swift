@@ -45,6 +45,10 @@ class AuthManager: NSObject {
     func signInWithGoogle() {
         GIDSignIn.sharedInstance().signIn()
     }
+    
+    func signOut() {
+        try? FUIAuth.defaultAuthUI()?.signOut()
+    }
 }
 
 extension AuthManager: FUIAuthDelegate {

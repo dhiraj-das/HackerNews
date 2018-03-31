@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456CE206F5299005ABD00 /* AppDelegate.swift */; };
-		8BB456D1206F5299005ABD00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456D0206F5299005ABD00 /* ViewController.swift */; };
+		8BB456D1206F5299005ABD00 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456D0206F5299005ABD00 /* BaseViewController.swift */; };
 		8BB456D4206F5299005ABD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D2206F5299005ABD00 /* Main.storyboard */; };
 		8BB456D6206F5299005ABD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D5206F5299005ABD00 /* Assets.xcassets */; };
 		8BB456D9206F5299005ABD00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D7206F5299005ABD00 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		6223DFECDC5A55CC45375364 /* Pods-HackerNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackerNews/Pods-HackerNews.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB456CB206F5299005ABD00 /* HackerNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB456CE206F5299005ABD00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BB456D0206F5299005ABD00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BB456D0206F5299005ABD00 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8BB456D3206F5299005ABD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BB456D5206F5299005ABD00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB456D8206F5299005ABD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,11 +70,11 @@
 		8BB456CD206F5299005ABD00 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456EB206FA5BD005ABD00 /* Common */,
 				8BB456EA206F6ED2005ABD00 /* HackerNews.entitlements */,
 				8BB456E7206F6D00005ABD00 /* Managers */,
 				8BB456E0206F5511005ABD00 /* Login */,
 				8BB456CE206F5299005ABD00 /* AppDelegate.swift */,
-				8BB456D0206F5299005ABD00 /* ViewController.swift */,
 				8BB456D2206F5299005ABD00 /* Main.storyboard */,
 				8BB456D5206F5299005ABD00 /* Assets.xcassets */,
 				8BB456D7206F5299005ABD00 /* LaunchScreen.storyboard */,
@@ -99,6 +99,14 @@
 				8BB456E8206F6D1F005ABD00 /* AuthManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		8BB456EB206FA5BD005ABD00 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456D0206F5299005ABD00 /* BaseViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D9BEA13D149630B3A3561484 /* Pods */ = {
@@ -268,7 +276,7 @@
 			files = (
 				8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */,
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
-				8BB456D1206F5299005ABD00 /* ViewController.swift in Sources */,
+				8BB456D1206F5299005ABD00 /* BaseViewController.swift in Sources */,
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
 				8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */,
 			);

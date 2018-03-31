@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet var loginView: LoginView!
     
@@ -22,6 +22,12 @@ class LoginViewController: UIViewController {
         authManager = AuthManager()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if authManager.isLoggedIn {
+            performSegue(withIdentifier: "showHome", sender: nil)
+        }
+    }
 }
 
 extension LoginViewController: GIDSignInUIDelegate {}
