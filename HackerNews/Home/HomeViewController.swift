@@ -14,7 +14,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        HomeService().fetchTopStories { (items, error) in
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

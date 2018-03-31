@@ -9,5 +9,5 @@ target 'HackerNews' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Phone'
-  
+  pod 'Alamofire', '~> 4.7'
 end
