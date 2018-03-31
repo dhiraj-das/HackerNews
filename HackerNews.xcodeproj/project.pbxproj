@@ -23,6 +23,11 @@
 		8BB456F8206FD129005ABD00 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */; };
 		8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */; };
 		8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456FB206FDF23005ABD00 /* HomeView.swift */; };
+		8BB456FF206FE91D005ABD00 /* HomeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456FE206FE91D005ABD00 /* HomeDataProvider.swift */; };
+		8BB45701206FE9AF005ABD00 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45700206FE9AF005ABD00 /* HomeTableViewCell.swift */; };
+		8BB45704206FF9CC005ABD00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45703206FF9CC005ABD00 /* Item.swift */; };
+		8BB45706206FFB8C005ABD00 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45705206FFB8C005ABD00 /* HomeManager.swift */; };
+		8BB45709206FFBDD005ABD00 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45708206FFBDD005ABD00 /* HomeService.swift */; };
 		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
 		8BB456FB206FDF23005ABD00 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8BB456FE206FE91D005ABD00 /* HomeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataProvider.swift; sourceTree = "<group>"; };
+		8BB45700206FE9AF005ABD00 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		8BB45703206FF9CC005ABD00 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8BB45705206FFB8C005ABD00 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		8BB45708206FFBDD005ABD00 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,8 +94,10 @@
 		8BB456CD206F5299005ABD00 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
-				8BB456EB206FA5BD005ABD00 /* Common */,
 				8BB456EA206F6ED2005ABD00 /* HackerNews.entitlements */,
+				8BB456EB206FA5BD005ABD00 /* Common */,
+				8BB45707206FFB9E005ABD00 /* Network */,
+				8BB45702206FF9AE005ABD00 /* Data Models */,
 				8BB456E7206F6D00005ABD00 /* Managers */,
 				8BB456EC206FAF3C005ABD00 /* Home */,
 				8BB456E0206F5511005ABD00 /* Login */,
@@ -112,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB456E8206F6D1F005ABD00 /* AuthManager.swift */,
+				8BB45705206FFB8C005ABD00 /* HomeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 		8BB456EC206FAF3C005ABD00 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456FD206FE8EE005ABD00 /* Data */,
 				8BB456F1206FCE6E005ABD00 /* Views */,
 				8BB456ED206FAF64005ABD00 /* Home.storyboard */,
 				8BB456EF206FAFFF005ABD00 /* HomeViewController.swift */,
@@ -141,6 +155,7 @@
 				8BB456F2206FCEB8005ABD00 /* NavigationBarTitleView.xib */,
 				8BB456F4206FD0AC005ABD00 /* NavigationBarTitleView.swift */,
 				8BB456FB206FDF23005ABD00 /* HomeView.swift */,
+				8BB45700206FE9AF005ABD00 /* HomeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +167,30 @@
 				8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BB456FD206FE8EE005ABD00 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456FE206FE91D005ABD00 /* HomeDataProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8BB45702206FF9AE005ABD00 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BB45703206FF9CC005ABD00 /* Item.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		8BB45707206FFB9E005ABD00 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8BB45708206FFBDD005ABD00 /* HomeService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D9BEA13D149630B3A3561484 /* Pods */ = {
@@ -323,14 +362,19 @@
 			files = (
 				8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */,
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
+				8BB45706206FFB8C005ABD00 /* HomeManager.swift in Sources */,
 				8BB456D1206F5299005ABD00 /* BaseViewController.swift in Sources */,
 				8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */,
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
 				8BB456F5206FD0AC005ABD00 /* NavigationBarTitleView.swift in Sources */,
+				8BB45701206FE9AF005ABD00 /* HomeTableViewCell.swift in Sources */,
+				8BB45704206FF9CC005ABD00 /* Item.swift in Sources */,
+				8BB45709206FFBDD005ABD00 /* HomeService.swift in Sources */,
 				8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */,
 				8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */,
 				8BB456F8206FD129005ABD00 /* UIView+Extensions.swift in Sources */,
 				8BB456F0206FAFFF005ABD00 /* HomeViewController.swift in Sources */,
+				8BB456FF206FE91D005ABD00 /* HomeDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Top Stories-->
         <scene sceneID="1zi-6O-VQn">
@@ -17,8 +22,109 @@
                     <view key="view" contentMode="scaleToFill" id="FR4-f2-eqs" customClass="HomeView" customModule="HackerNews" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-3L-jdU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" id="L8m-ER-h2v" customClass="HomeTableViewCell" customModule="HackerNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L8m-ER-h2v" id="iCR-9Z-kuf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-iQ-QKy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.19533925513698625" colorSpace="deviceRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="9hM-QA-nAH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" red="0.70120251180000004" green="0.28134676809999998" blue="0.031296148900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Some Topic Headline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-s2-yfh">
+                                                    <rect key="frame" x="82" y="4" width="248" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ka-19-i1u">
+                                                    <rect key="frame" x="346.5" y="22.5" width="12.5" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="Uxf-uI-SHN">
+                                                    <rect key="frame" x="340" y="-2.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="nxD-oW-Iru"/>
+                                                        <constraint firstAttribute="height" constant="25" id="xID-M1-0ri"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="https://www.google.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R48-KE-llB">
+                                                    <rect key="frame" x="82" y="23.5" width="114.5" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Some multiline description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-g4-vkX">
+                                                    <rect key="frame" x="82" y="44.5" width="248" height="46.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="13 mins ago * prophet31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-ec-g0J">
+                                                    <rect key="frame" x="82" y="101" width="138.5" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3Ka-19-i1u" firstAttribute="centerX" secondItem="Uxf-uI-SHN" secondAttribute="centerX" id="0J3-Zh-C47"/>
+                                                <constraint firstItem="5I2-iQ-QKy" firstAttribute="top" secondItem="iCR-9Z-kuf" secondAttribute="top" id="5Po-wd-WbM"/>
+                                                <constraint firstItem="Uxf-uI-SHN" firstAttribute="leading" secondItem="DBd-s2-yfh" secondAttribute="trailing" constant="10" id="8wz-5f-7Qq"/>
+                                                <constraint firstItem="wMB-g4-vkX" firstAttribute="top" secondItem="R48-KE-llB" secondAttribute="bottom" constant="8" id="9Hu-Wu-h4e"/>
+                                                <constraint firstItem="2cX-ec-g0J" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="AYd-Jr-ouX"/>
+                                                <constraint firstItem="DBd-s2-yfh" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="HsJ-iL-amH"/>
+                                                <constraint firstItem="R48-KE-llB" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="Tbd-Go-bRl"/>
+                                                <constraint firstItem="R48-KE-llB" firstAttribute="top" secondItem="DBd-s2-yfh" secondAttribute="bottom" constant="1" id="WZj-Rl-hz8"/>
+                                                <constraint firstItem="3Ka-19-i1u" firstAttribute="centerY" secondItem="iCR-9Z-kuf" secondAttribute="centerY" constant="7" id="X4K-jq-SWr"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uxf-uI-SHN" secondAttribute="trailing" constant="10" id="aWn-YU-dle"/>
+                                                <constraint firstItem="Uxf-uI-SHN" firstAttribute="centerY" secondItem="iCR-9Z-kuf" secondAttribute="centerY" constant="-12" id="ak1-Ue-9nb"/>
+                                                <constraint firstItem="5I2-iQ-QKy" firstAttribute="leading" secondItem="iCR-9Z-kuf" secondAttribute="leading" id="cm8-LJ-c8n"/>
+                                                <constraint firstAttribute="bottom" secondItem="5I2-iQ-QKy" secondAttribute="bottom" constant="4" id="eyL-M4-ylC"/>
+                                                <constraint firstItem="2cX-ec-g0J" firstAttribute="top" secondItem="wMB-g4-vkX" secondAttribute="bottom" constant="10" id="hjr-QI-UEf"/>
+                                                <constraint firstItem="DBd-s2-yfh" firstAttribute="top" secondItem="iCR-9Z-kuf" secondAttribute="top" constant="4" id="nwh-Dg-fAs"/>
+                                                <constraint firstItem="wMB-g4-vkX" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="o2J-3B-nmW"/>
+                                                <constraint firstItem="wMB-g4-vkX" firstAttribute="trailing" secondItem="DBd-s2-yfh" secondAttribute="trailing" id="woz-CR-X0p"/>
+                                                <constraint firstItem="2cX-ec-g0J" firstAttribute="bottom" secondItem="5I2-iQ-QKy" secondAttribute="bottom" id="yR1-1w-B3b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="additionalDetailsLabel" destination="2cX-ec-g0J" id="C6s-GA-437"/>
+                                            <outlet property="commentCountLabel" destination="3Ka-19-i1u" id="2eh-78-qhh"/>
+                                            <outlet property="descriptionLabel" destination="wMB-g4-vkX" id="2R2-9Y-4qw"/>
+                                            <outlet property="postTitleLabel" destination="DBd-s2-yfh" id="Png-7k-J32"/>
+                                            <outlet property="scoreLabel" destination="5I2-iQ-QKy" id="Igd-T7-Hhh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6GV-2w-ftI" firstAttribute="trailing" secondItem="YZW-3L-jdU" secondAttribute="trailing" id="HbG-CE-CPL"/>
+                            <constraint firstItem="YZW-3L-jdU" firstAttribute="leading" secondItem="6GV-2w-ftI" secondAttribute="leading" id="fdn-MS-iGW"/>
+                            <constraint firstItem="YZW-3L-jdU" firstAttribute="top" secondItem="6GV-2w-ftI" secondAttribute="top" id="mNo-xa-yfS"/>
+                            <constraint firstItem="6GV-2w-ftI" firstAttribute="bottom" secondItem="YZW-3L-jdU" secondAttribute="bottom" id="o4U-So-IpQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6GV-2w-ftI"/>
+                        <connections>
+                            <outlet property="tableView" destination="YZW-3L-jdU" id="zgg-4l-g2d"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="YeX-xI-GPZ">
                         <nil key="title"/>
@@ -50,4 +156,7 @@
             <point key="canvasLocation" x="-258" y="105"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="32" height="32"/>
+    </resources>
 </document>
