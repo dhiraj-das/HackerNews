@@ -28,8 +28,8 @@ extension LoginViewController: GIDSignInUIDelegate {}
 
 extension LoginViewController: LoginViewDelegate {
     
-    func didTapOnPhoneAuthButton() {
-        authManager.signInWith(phoneNumber: "9706874857", fromViewController: self)
+    func didTapOnPhoneAuthButton(phoneNo: String) {
+        authManager.signInWith(phoneNumber: phoneNo, fromViewController: self)
     }
     
     func didTapOnGoogleAuthButton() {

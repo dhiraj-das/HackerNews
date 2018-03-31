@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gir-2B-w8q">
-                                <rect key="frame" x="158" y="237.5" width="58.5" height="24"/>
+                                <rect key="frame" x="158" y="233.5" width="58.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                         <color key="backgroundColor" red="1" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gir-2B-w8q" firstAttribute="centerX" secondItem="lBx-Ks-aDW" secondAttribute="centerX" id="LCr-Eu-BmX"/>
-                            <constraint firstItem="gir-2B-w8q" firstAttribute="top" secondItem="lBx-Ks-aDW" secondAttribute="bottom" constant="8" id="j8V-E8-Wqp"/>
+                            <constraint firstItem="gir-2B-w8q" firstAttribute="top" secondItem="lBx-Ks-aDW" secondAttribute="bottom" constant="4" id="j8V-E8-Wqp"/>
                             <constraint firstItem="lBx-Ks-aDW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="oX1-yl-lNO"/>
                             <constraint firstItem="lBx-Ks-aDW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qfq-xv-ise"/>
                         </constraints>

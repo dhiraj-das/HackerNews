@@ -19,6 +19,14 @@ class AuthManager: NSObject {
     private var authUI: FUIAuth!
     weak var delegate: AuthManagerDelegate?
     
+    var currentUser: User? {
+        return FUIAuth.defaultAuthUI()?.auth?.currentUser
+    }
+    
+    var isLoggedIn: Bool {
+        return currentUser != nil
+    }
+    
     override init() {
         super.init()
         guard let authUI = FUIAuth.defaultAuthUI() else { return }
