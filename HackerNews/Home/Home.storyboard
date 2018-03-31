@@ -10,17 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Top Stories-->
         <scene sceneID="1zi-6O-VQn">
             <objects>
-                <viewController id="co8-Hx-JD5" customClass="HomeViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FR4-f2-eqs">
+                <viewController title="Top Stories" id="co8-Hx-JD5" customClass="HomeViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FR4-f2-eqs" customClass="HomeView" customModule="HackerNews" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="6GV-2w-ftI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YeX-xI-GPZ"/>
+                    <navigationItem key="navigationItem" id="YeX-xI-GPZ">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeView" destination="FR4-f2-eqs" id="otm-P2-NJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vbo-Ys-HuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

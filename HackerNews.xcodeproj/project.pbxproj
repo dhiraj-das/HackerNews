@@ -18,6 +18,11 @@
 		8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E8206F6D1F005ABD00 /* AuthManager.swift */; };
 		8BB456EE206FAF64005ABD00 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456ED206FAF64005ABD00 /* Home.storyboard */; };
 		8BB456F0206FAFFF005ABD00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456EF206FAFFF005ABD00 /* HomeViewController.swift */; };
+		8BB456F3206FCEB8005ABD00 /* NavigationBarTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456F2206FCEB8005ABD00 /* NavigationBarTitleView.xib */; };
+		8BB456F5206FD0AC005ABD00 /* NavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456F4206FD0AC005ABD00 /* NavigationBarTitleView.swift */; };
+		8BB456F8206FD129005ABD00 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */; };
+		8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */; };
+		8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456FB206FDF23005ABD00 /* HomeView.swift */; };
 		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,11 @@
 		8BB456EA206F6ED2005ABD00 /* HackerNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerNews.entitlements; sourceTree = "<group>"; };
 		8BB456ED206FAF64005ABD00 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8BB456EF206FAFFF005ABD00 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8BB456F2206FCEB8005ABD00 /* NavigationBarTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarTitleView.xib; sourceTree = "<group>"; };
+		8BB456F4206FD0AC005ABD00 /* NavigationBarTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTitleView.swift; sourceTree = "<group>"; };
+		8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		8BB456FB206FDF23005ABD00 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +119,7 @@
 		8BB456EB206FA5BD005ABD00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456F6206FD111005ABD00 /* Extensions */,
 				8BB456D0206F5299005ABD00 /* BaseViewController.swift */,
 			);
 			path = Common;
@@ -117,10 +128,30 @@
 		8BB456EC206FAF3C005ABD00 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456F1206FCE6E005ABD00 /* Views */,
 				8BB456ED206FAF64005ABD00 /* Home.storyboard */,
 				8BB456EF206FAFFF005ABD00 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8BB456F1206FCE6E005ABD00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456F2206FCEB8005ABD00 /* NavigationBarTitleView.xib */,
+				8BB456F4206FD0AC005ABD00 /* NavigationBarTitleView.swift */,
+				8BB456FB206FDF23005ABD00 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BB456F6206FD111005ABD00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */,
+				8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D9BEA13D149630B3A3561484 /* Pods */ = {
@@ -208,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB456D9206F5299005ABD00 /* LaunchScreen.storyboard in Resources */,
+				8BB456F3206FCEB8005ABD00 /* NavigationBarTitleView.xib in Resources */,
 				8BB456EE206FAF64005ABD00 /* Home.storyboard in Resources */,
 				8BB456E6206F5EFF005ABD00 /* GoogleService-Info.plist in Resources */,
 				8BB456D6206F5299005ABD00 /* Assets.xcassets in Resources */,
@@ -292,8 +324,12 @@
 				8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */,
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
 				8BB456D1206F5299005ABD00 /* BaseViewController.swift in Sources */,
+				8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */,
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
+				8BB456F5206FD0AC005ABD00 /* NavigationBarTitleView.swift in Sources */,
+				8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */,
 				8BB456E9206F6D1F005ABD00 /* AuthManager.swift in Sources */,
+				8BB456F8206FD129005ABD00 /* UIView+Extensions.swift in Sources */,
 				8BB456F0206FAFFF005ABD00 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
