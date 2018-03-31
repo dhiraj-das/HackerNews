@@ -12,6 +12,8 @@
 		8BB456D4206F5299005ABD00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D2206F5299005ABD00 /* Main.storyboard */; };
 		8BB456D6206F5299005ABD00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D5206F5299005ABD00 /* Assets.xcassets */; };
 		8BB456D9206F5299005ABD00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB456D7206F5299005ABD00 /* LaunchScreen.storyboard */; };
+		8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E1206F5527005ABD00 /* LoginView.swift */; };
+		8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456E3206F553A005ABD00 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8BB456D5206F5299005ABD00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB456D8206F5299005ABD00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BB456DA206F5299005ABD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB456E1206F5527005ABD00 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8BB456E3206F553A005ABD00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		8BB456CD206F5299005ABD00 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				8BB456E0206F5511005ABD00 /* Login */,
 				8BB456CE206F5299005ABD00 /* AppDelegate.swift */,
 				8BB456D0206F5299005ABD00 /* ViewController.swift */,
 				8BB456D2206F5299005ABD00 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				8BB456DA206F5299005ABD00 /* Info.plist */,
 			);
 			path = HackerNews;
+			sourceTree = "<group>";
+		};
+		8BB456E0206F5511005ABD00 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8BB456E1206F5527005ABD00 /* LoginView.swift */,
+				8BB456E3206F553A005ABD00 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */,
+				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
 				8BB456D1206F5299005ABD00 /* ViewController.swift in Sources */,
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
 			);
