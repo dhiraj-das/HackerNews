@@ -72,4 +72,10 @@ extension HomeViewController: HomeViewDelegate {
             self.homeView.refreshDataSource()
         }
     }
+    
+    func didTapNewsItem(item: News) {
+        let identifier = String(describing: HomeDetailViewController.self)
+        guard let homeDetailVC = storyboard?.instantiateViewController(withIdentifier: identifier) as? HomeDetailViewController else { return }
+        navigationController?.pushViewController(homeDetailVC, animated: true)
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeViewDelegate: class {
     func fetchStories()
+    func didTapNewsItem(item: News)
 }
 
 class HomeView: UIView {
@@ -46,7 +47,6 @@ extension HomeView: UITableViewDataSource {
         let cellIdentifier = String(describing: HomeTableViewCell.self)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
             as? HomeTableViewCell else { return HomeTableViewCell() }
-        cell.delegate = self
         cell.cellData = dataprovider?.items[indexPath.row]
         return cell
     }
@@ -59,7 +59,8 @@ extension HomeView: UITableViewDataSource {
 extension HomeView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Handle This.
+        guard let _dataprovider = dataprovider else { return }
+        delegate?.didTapNewsItem(item: _dataprovider.items[indexPath.row])
     }
 }
 
@@ -72,11 +73,5 @@ extension HomeView: UIScrollViewDelegate {
         if rowIndex > _dataprovider.items.count - 20 {
             delegate?.fetchStories()
         }
-    }
-}
-
-extension HomeView: HomeTableViewCellDelegate {
-    func didTapOnComment(id: Int) {
-        //TODO: Handle this.
     }
 }
