@@ -12,4 +12,5 @@ target 'HackerNews' do
   pod 'Alamofire', '~> 4.7'
   pod 'JGProgressHUD'
   pod 'PagingMenuController', '~> 2.2.0'
+  pod 'RealmSwift'
 end
