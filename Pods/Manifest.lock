@@ -52,6 +52,11 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - PagingMenuController (2.2.0)
+  - Realm (3.2.0):
+    - Realm/Headers (= 3.2.0)
+  - Realm/Headers (3.2.0)
+  - RealmSwift (3.2.0):
+    - Realm (= 3.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -61,6 +66,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - JGProgressHUD
   - PagingMenuController (~> 2.2.0)
+  - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
@@ -77,7 +83,9 @@ SPEC CHECKSUMS:
   JGProgressHUD: 63ad7d8850702a91625fb9ed8e94eab706c03d81
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
+  Realm: ae552b9b9eca3a12374a589fa842f220e286a80a
+  RealmSwift: 05727129547dcab3fe828bd87bc30be903736b9c
 
-PODFILE CHECKSUM: 7f4e6904e9d7414e5d2aa9a5d50bd3c53236fbec
+PODFILE CHECKSUM: 6042ba1558fa7b7e483afbdf77b877d90925b87a
 
 COCOAPODS: 1.4.0
