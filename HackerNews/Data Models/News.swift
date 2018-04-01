@@ -57,3 +57,30 @@ extension News {
         return commentIds.count
     }
 }
+
+extension News: HomeTableViewCellRepresentable {
+    var urlString: String {
+        return url?.absoluteString ?? ""
+    }
+    
+    var votes: Int {
+        return score ?? 0
+    }
+    
+    var commentCount: Int {
+        return numberOfComments
+    }
+    
+    var datetime: String {
+        guard let _datetime = time else { return "" }
+        return _datetime.timeAgo
+    }
+    
+    var userName: String {
+        return by ?? ""
+    }
+    
+    var description: String {
+        return text ?? ""
+    }
+}

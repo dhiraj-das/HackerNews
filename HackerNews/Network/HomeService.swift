@@ -21,7 +21,9 @@ class HomeService {
         apiClient = ApiClient()
     }
     
-    func fetchTopStories(completion: @escaping ((_ data: [News]?, _ error: Error?) -> Void)) {
+    func fetchTopStories(lastItem: Int? = nil,
+                         limit: Int = 30,
+                         completion: @escaping ((_ data: [News]?, _ error: Error?) -> Void)) {
         let concurrentQueue = DispatchQueue(label: "top_stories",
                                             qos: .background,
                                             attributes: .concurrent,
@@ -40,23 +42,30 @@ class HomeService {
                 return
             }
             
+            var topStories: [News] = []
+            let lastFetchedItemIndex = lastItem == nil ? itemIds.startIndex : itemIds.index(lastItem!, offsetBy: 1)
+            let endIndex = itemIds.index(lastFetchedItemIndex, offsetBy: 30)
+            let slicedItemIds = itemIds[lastFetchedItemIndex..<endIndex]
+            
             concurrentQueue.async {
-                for itemId in itemIds {
+                for itemId in slicedItemIds {
                     dispatchGroup.enter()
                     self.fetchNews(withId: itemId, completion: { (item, error) in
                         guard error == nil else {
                             dispatchGroup.leave()
                             return
                         }
-                        
                         guard let _item = item else {
                             dispatchGroup.leave()
                             return
                         }
-                        
+                        topStories.append(_item)
                         dispatchGroup.leave()
                     })
                 }
+                dispatchGroup.notify(queue: .main, execute: {
+                    completion(topStories, nil)
+                })
             }
         })
     }

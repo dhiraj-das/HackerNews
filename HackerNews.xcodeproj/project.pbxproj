@@ -33,6 +33,7 @@
 		8BB4570F20701280005ABD00 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4570E20701280005ABD00 /* RequestFactory.swift */; };
 		8BB4571120701EC2005ABD00 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4571020701EC2005ABD00 /* ServiceRequest.swift */; };
 		8BB45713207024C3005ABD00 /* TopStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45712207024C3005ABD00 /* TopStories.swift */; };
+		8BB457172070D885005ABD00 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB457162070D885005ABD00 /* Date+Extensions.swift */; };
 		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		8BB4570E20701280005ABD00 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		8BB4571020701EC2005ABD00 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		8BB45712207024C3005ABD00 /* TopStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStories.swift; sourceTree = "<group>"; };
+		8BB457162070D885005ABD00 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			children = (
 				8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */,
 				8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */,
+				8BB457162070D885005ABD00 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				8BB4570F20701280005ABD00 /* RequestFactory.swift in Sources */,
 				8BB456E4206F553A005ABD00 /* LoginViewController.swift in Sources */,
+				8BB457172070D885005ABD00 /* Date+Extensions.swift in Sources */,
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
 				8BB45706206FFB8C005ABD00 /* HomeManager.swift in Sources */,
 				8BB4570B206FFEA5005ABD00 /* ApiClient.swift in Sources */,

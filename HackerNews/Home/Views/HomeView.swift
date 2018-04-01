@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewDelegate: class {
-    
+    func fetchStories()
 }
 
 class HomeView: UIView {
@@ -17,7 +17,6 @@ class HomeView: UIView {
     @IBOutlet weak var tableView: UITableView!
     
     weak var delegate: HomeViewDelegate?
-    
     var dataprovider: HomeDataProvider? {
         didSet {
             tableView.reloadData()
@@ -36,6 +35,9 @@ class HomeView: UIView {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    func refreshDataSource() {
+        tableView.reloadData()
+    }
 }
 
 extension HomeView: UITableViewDataSource {
@@ -44,6 +46,7 @@ extension HomeView: UITableViewDataSource {
         let cellIdentifier = String(describing: HomeTableViewCell.self)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
             as? HomeTableViewCell else { return HomeTableViewCell() }
+        cell.cellData = dataprovider?.items[indexPath.row]
         return cell
     }
     
@@ -56,5 +59,17 @@ extension HomeView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: Handle This.
+    }
+}
+
+extension HomeView: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard let visibleIndexPaths = tableView.indexPathsForVisibleRows else { return }
+        guard let rowIndex = visibleIndexPaths.last?.row else { return }
+        guard let _dataprovider = dataprovider else { return }
+        if rowIndex > _dataprovider.items.count - 20 {
+            delegate?.fetchStories()
+        }
     }
 }

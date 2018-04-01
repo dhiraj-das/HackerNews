@@ -11,14 +11,16 @@ import UIKit
 protocol HomeTableViewCellRepresentable {
     var title: String { get }
     var commentCount: Int { get }
-    var score: Int { get }
+    var votes: Int { get }
     var datetime: String { get }
     var userName: String { get }
     var description: String { get }
+    var urlString: String { get }
 }
 
 class HomeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -34,9 +36,10 @@ class HomeTableViewCell: UITableViewCell {
             guard let data = cellData else { return }
             postTitleLabel.text = data.title
             commentCountLabel.text = "\(data.commentCount)"
-            scoreLabel.text = "\(data.score)"
+            scoreLabel.text = "\(data.votes)"
             descriptionLabel.text = "\(data.description)"
-            
+            urlLabel.text = data.urlString
+            additionalDetailsLabel.text = "\(data.datetime) | \(data.userName)"
         }
     }
     

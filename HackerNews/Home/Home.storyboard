@@ -64,7 +64,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="https://www.google.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R48-KE-llB">
-                                                    <rect key="frame" x="82" y="23.5" width="114.5" height="13"/>
+                                                    <rect key="frame" x="82" y="23.5" width="248" height="13"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -91,6 +91,7 @@
                                                 <constraint firstItem="DBd-s2-yfh" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="HsJ-iL-amH"/>
                                                 <constraint firstItem="R48-KE-llB" firstAttribute="leading" secondItem="5I2-iQ-QKy" secondAttribute="trailing" constant="12" id="Tbd-Go-bRl"/>
                                                 <constraint firstItem="R48-KE-llB" firstAttribute="top" secondItem="DBd-s2-yfh" secondAttribute="bottom" constant="1" id="WZj-Rl-hz8"/>
+                                                <constraint firstItem="R48-KE-llB" firstAttribute="trailing" secondItem="DBd-s2-yfh" secondAttribute="trailing" id="Wth-RZ-J5x"/>
                                                 <constraint firstItem="3Ka-19-i1u" firstAttribute="centerY" secondItem="iCR-9Z-kuf" secondAttribute="centerY" constant="7" id="X4K-jq-SWr"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uxf-uI-SHN" secondAttribute="trailing" constant="10" id="aWn-YU-dle"/>
                                                 <constraint firstItem="Uxf-uI-SHN" firstAttribute="centerY" secondItem="iCR-9Z-kuf" secondAttribute="centerY" constant="-12" id="ak1-Ue-9nb"/>
@@ -109,6 +110,7 @@
                                             <outlet property="descriptionLabel" destination="wMB-g4-vkX" id="2R2-9Y-4qw"/>
                                             <outlet property="postTitleLabel" destination="DBd-s2-yfh" id="Png-7k-J32"/>
                                             <outlet property="scoreLabel" destination="5I2-iQ-QKy" id="Igd-T7-Hhh"/>
+                                            <outlet property="urlLabel" destination="R48-KE-llB" id="E6i-ih-Smj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
