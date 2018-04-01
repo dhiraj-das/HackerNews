@@ -14,6 +14,7 @@ class HomeDetailViewController: BaseViewController {
     @IBOutlet var homeDetailView: HomeDetailView!
     
     let options = PagingMenuOptions()
+    var pagingMenuController: PagingMenuController?
     var newsItem: Item?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,13 +35,17 @@ class HomeDetailViewController: BaseViewController {
     }
     
     private func setupPagingMenuController() {
-        guard let pagingMenuController = childViewControllers.first as? PagingMenuController else {
+        guard let _pagingMenuController = childViewControllers.first as? PagingMenuController else {
             assertionFailure("child view controller must be an instance of PagingMenuController")
             return
         }
-        pagingMenuController.setup(options)
-        
-        guard let viewControllers = pagingMenuController.pagingViewController?.controllers else { return }
+        pagingMenuController = _pagingMenuController
+        _pagingMenuController.setup(options)
+        passDataToChildViewControllers()
+    }
+    
+    private func passDataToChildViewControllers() {
+        guard let viewControllers = pagingMenuController?.pagingViewController?.controllers else { return }
         for (_, viewController) in viewControllers.enumerated() {
             if let commentVC = viewController as? CommentViewController {
                 commentVC.commentIds = newsItem?.commentIds

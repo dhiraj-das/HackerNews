@@ -74,6 +74,7 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func didTapNewsItem(item: Item) {
+        guard item.commentCount > 0 else { return }
         let identifier = String(describing: HomeDetailViewController.self)
         guard let homeDetailVC = storyboard?.instantiateViewController(withIdentifier: identifier) as? HomeDetailViewController else { return }
         homeDetailVC.newsItem = item

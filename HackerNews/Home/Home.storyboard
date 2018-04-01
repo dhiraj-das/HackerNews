@@ -259,7 +259,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pq-lF-i9O">
-                                <rect key="frame" x="12" y="72" width="29.5" height="16"/>
+                                <rect key="frame" x="12" y="72" width="351" height="16"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -281,6 +281,7 @@
                             <constraint firstItem="X1Y-qF-Oq5" firstAttribute="top" secondItem="5Pq-lF-i9O" secondAttribute="bottom" constant="8" id="qER-Tp-gPg"/>
                             <constraint firstItem="X1Y-qF-Oq5" firstAttribute="leading" secondItem="S3H-mk-GG3" secondAttribute="leading" constant="12" id="qq0-Nf-rlt"/>
                             <constraint firstItem="NmO-2e-6rz" firstAttribute="leading" secondItem="S3H-mk-GG3" secondAttribute="leading" id="w7u-98-H3g"/>
+                            <constraint firstItem="S3H-mk-GG3" firstAttribute="trailing" secondItem="5Pq-lF-i9O" secondAttribute="trailing" constant="12" id="xHd-cB-deP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S3H-mk-GG3"/>
                         <connections>
