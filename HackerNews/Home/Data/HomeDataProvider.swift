@@ -10,6 +10,6 @@ import Foundation
 
 class HomeDataProvider {
     
-    var items: [Item] = []
+    var items: [News] = []
     
 }

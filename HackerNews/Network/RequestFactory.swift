@@ -10,8 +10,19 @@ import Foundation
 
 class RequestFactory {
     
-    static func topStoriesRequest() -> ServiceRequest {
+    static func requestTopStories() -> ServiceRequest {
         let urlString = "https://hacker-news.firebaseio.com/v0/topstories.json"
+        
+        let request = RequestBuilder()
+            .ofType(.get)
+            .set(urlString: urlString)
+            .build()
+        
+        return request
+    }
+    
+    static func requestItem(withId id: Int) -> ServiceRequest {
+        let urlString = "https://hacker-news.firebaseio.com/v0/item/\(id).json"
         
         let request = RequestBuilder()
             .ofType(.get)

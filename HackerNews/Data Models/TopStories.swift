@@ -9,5 +9,5 @@
 import Foundation
 
 struct TopStories {
-    var items: [Item]
+    var items: [News]
 }

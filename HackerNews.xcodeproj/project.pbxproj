@@ -25,7 +25,7 @@
 		8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456FB206FDF23005ABD00 /* HomeView.swift */; };
 		8BB456FF206FE91D005ABD00 /* HomeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB456FE206FE91D005ABD00 /* HomeDataProvider.swift */; };
 		8BB45701206FE9AF005ABD00 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45700206FE9AF005ABD00 /* HomeTableViewCell.swift */; };
-		8BB45704206FF9CC005ABD00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45703206FF9CC005ABD00 /* Item.swift */; };
+		8BB45704206FF9CC005ABD00 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45703206FF9CC005ABD00 /* News.swift */; };
 		8BB45706206FFB8C005ABD00 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45705206FFB8C005ABD00 /* HomeManager.swift */; };
 		8BB45709206FFBDD005ABD00 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45708206FFBDD005ABD00 /* HomeService.swift */; };
 		8BB4570B206FFEA5005ABD00 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4570A206FFEA5005ABD00 /* ApiClient.swift */; };
@@ -60,7 +60,7 @@
 		8BB456FB206FDF23005ABD00 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8BB456FE206FE91D005ABD00 /* HomeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataProvider.swift; sourceTree = "<group>"; };
 		8BB45700206FE9AF005ABD00 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		8BB45703206FF9CC005ABD00 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8BB45703206FF9CC005ABD00 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		8BB45705206FFB8C005ABD00 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		8BB45708206FFBDD005ABD00 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		8BB4570A206FFEA5005ABD00 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		8BB45702206FF9AE005ABD00 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				8BB45703206FF9CC005ABD00 /* Item.swift */,
+				8BB45703206FF9CC005ABD00 /* News.swift */,
 				8BB45712207024C3005ABD00 /* TopStories.swift */,
 			);
 			path = "Data Models";
@@ -387,7 +387,7 @@
 				8BB456CF206F5299005ABD00 /* AppDelegate.swift in Sources */,
 				8BB456F5206FD0AC005ABD00 /* NavigationBarTitleView.swift in Sources */,
 				8BB45701206FE9AF005ABD00 /* HomeTableViewCell.swift in Sources */,
-				8BB45704206FF9CC005ABD00 /* Item.swift in Sources */,
+				8BB45704206FF9CC005ABD00 /* News.swift in Sources */,
 				8BB4571120701EC2005ABD00 /* ServiceRequest.swift in Sources */,
 				8BB45709206FFBDD005ABD00 /* HomeService.swift in Sources */,
 				8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */,
