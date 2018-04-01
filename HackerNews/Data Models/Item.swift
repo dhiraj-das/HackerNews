@@ -1,5 +1,5 @@
 //
-//  News.swift
+//  Item.swift
 //  HackerNews
 //
 //  Created by Dhiraj Das on 3/31/18.
@@ -19,9 +19,9 @@ fileprivate struct Keys {
     static let time = "time"
 }
 
-struct News {
+struct Item {
     var id: Int
-    var title: String
+    var title: String?
     var text: String?
     var commentIds: [Int] = []
     var score: Int?
@@ -32,11 +32,10 @@ struct News {
     
     init?(data: [String: Any]) {
         
-        guard let _id = data[Keys.id] as? Int,
-            let _title = data[Keys.title] as? String else { return nil }
+        guard let _id = data[Keys.id] as? Int else { return nil }
         
         id = _id
-        title = _title
+        title = data[Keys.title] as? String
         text = data[Keys.text] as? String
         commentIds = data[Keys.kids] as? [Int] ?? []
         score = data[Keys.score] as? Int
@@ -52,13 +51,14 @@ struct News {
     }
 }
 
-extension News {
+extension Item {
     var numberOfComments: Int {
         return commentIds.count
     }
 }
 
-extension News: HomeTableViewCellRepresentable {
+extension Item: HomeTableViewCellRepresentable {
+    
     var urlString: String {
         return url?.absoluteString ?? ""
     }
@@ -84,3 +84,5 @@ extension News: HomeTableViewCellRepresentable {
         return text?.convertHtml() ?? NSAttributedString()
     }
 }
+
+extension Item: CommentTableViewCellRepresentable {}

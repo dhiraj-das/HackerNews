@@ -21,9 +21,11 @@ class HomeService {
         apiClient = ApiClient()
     }
     
+    //MARK: TopStories API
+    
     func fetchTopStories(lastItem: Int? = nil,
                          limit: Int = 30,
-                         completion: @escaping ((_ data: [News]?, _ error: Error?) -> Void)) {
+                         completion: @escaping ((_ data: [Item]?, _ error: Error?) -> Void)) {
         let concurrentQueue = DispatchQueue(label: "top_stories",
                                             qos: .background,
                                             attributes: .concurrent,
@@ -42,7 +44,7 @@ class HomeService {
                 return
             }
             
-            var topStories: [News] = []
+            var topStories: [Item] = []
             let lastFetchedItemIndex = lastItem == nil ? itemIds.startIndex : itemIds.index(lastItem!, offsetBy: 1)
             let endIndex = itemIds.index(lastFetchedItemIndex, offsetBy: 30)
             let slicedItemIds = itemIds[lastFetchedItemIndex..<endIndex]
@@ -50,7 +52,7 @@ class HomeService {
             concurrentQueue.async {
                 for itemId in slicedItemIds {
                     dispatchGroup.enter()
-                    self.fetchNews(withId: itemId, completion: { (item, error) in
+                    self.fetchItem(withId: itemId, completion: { (item, error) in
                         guard error == nil else {
                             dispatchGroup.leave()
                             return
@@ -70,7 +72,9 @@ class HomeService {
         })
     }
     
-    func fetchNews(withId id: Int, completion: @escaping ((_ data: News?, _ error: Error?) -> Void)) {
+    //MARK: Fetch Item API
+    
+    func fetchItem(withId id: Int, completion: @escaping ((_ data: Item?, _ error: Error?) -> Void)) {
         apiClient.fetch(withRequest: RequestFactory.requestItem(withId: id)) { (data, error) in
             guard error == nil else {
                 completion(nil, error)
@@ -81,7 +85,41 @@ class HomeService {
                 completion(nil, error)
                 return
             }
-            completion(News(data: item), error)
+            completion(Item(data: item), error)
+        }
+    }
+    
+    //MARK: Comment APIs
+    
+    func fetchComments(ids: [Int], completion: @escaping ((_ data: [Item]?, _ error: Error?) -> Void)) {
+        let concurrentQueue = DispatchQueue(label: "comments",
+                                            qos: .background,
+                                            attributes: .concurrent,
+                                            autoreleaseFrequency: .inherit,
+                                            target: nil)
+        let dispatchGroup = DispatchGroup()
+        
+        var comments: [Item] = []
+        
+        concurrentQueue.async {
+            for itemId in ids {
+                dispatchGroup.enter()
+                self.fetchItem(withId: itemId, completion: { (item, error) in
+                    guard error == nil else {
+                        dispatchGroup.leave()
+                        return
+                    }
+                    guard let _item = item else {
+                        dispatchGroup.leave()
+                        return
+                    }
+                    comments.append(_item)
+                    dispatchGroup.leave()
+                })
+            }
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(comments, nil)
+            })
         }
     }
 }

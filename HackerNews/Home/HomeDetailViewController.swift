@@ -11,19 +11,53 @@ import PagingMenuController
 
 class HomeDetailViewController: BaseViewController {
 
+    @IBOutlet var homeDetailView: HomeDetailView!
+    
     let options = PagingMenuOptions()
+    var pagingMenuController: PagingMenuController?
+    var newsItem: Item?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        customizeNavigationBar()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let pagingMenuController = childViewControllers.first as? PagingMenuController else {
-            assertionFailure("Child view controller must be an instance of PagingMenuController")
+        setupPagingMenuController()
+        updateData()
+    }
+    
+    func updateData() {
+        guard let data = newsItem else { return }
+        homeDetailView.urlLabel.text = data.url?.absoluteString
+        homeDetailView.additionalDetailsLabel.text = "\(data.datetime) | \(data.userName)"
+    }
+    
+    private func setupPagingMenuController() {
+        guard let _pagingMenuController = childViewControllers.first as? PagingMenuController else {
+            assertionFailure("child view controller must be an instance of PagingMenuController")
             return
         }
-        pagingMenuController.setup(options)
+        pagingMenuController = _pagingMenuController
+        _pagingMenuController.setup(options)
+        passDataToChildViewControllers()
+    }
+    
+    private func passDataToChildViewControllers() {
+        guard let viewControllers = pagingMenuController?.pagingViewController?.controllers else { return }
+        for (_, viewController) in viewControllers.enumerated() {
+            if let commentVC = viewController as? CommentViewController {
+                commentVC.commentIds = newsItem?.commentIds
+            }
+        }
+    }
+    
+    private func customizeNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        if let news = newsItem {
+            navigationItem.title = news.title
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        }
     }
 }

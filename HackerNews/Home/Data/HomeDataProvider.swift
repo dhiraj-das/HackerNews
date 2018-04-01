@@ -10,10 +10,10 @@ import Foundation
 
 class HomeDataProvider {
     
-    var items: [News] = []
+    var items: [Item] = []
     var limit = 30
     
-    init(news: [News]) {
+    init(news: [Item]) {
         self.items = news
     }
 }

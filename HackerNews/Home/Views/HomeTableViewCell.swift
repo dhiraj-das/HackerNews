@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeTableViewCellRepresentable {
     var id: Int { get }
-    var title: String { get }
+    var title: String? { get }
     var commentCount: Int { get }
     var votes: Int { get }
     var datetime: String { get }
@@ -40,7 +40,7 @@ class HomeTableViewCell: UITableViewCell {
             commentCountLabel.text = "\(data.commentCount)"
             scoreLabel.text = "\(data.votes)"
             descriptionLabel.attributedText = data.description
-            urlLabel.text = data.urlString
+            urlLabel.text = data.urlString 
             additionalDetailsLabel.text = "\(data.datetime) | \(data.userName)"
         }
     }
