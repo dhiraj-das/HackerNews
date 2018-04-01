@@ -41,6 +41,8 @@
 		8BDCE8B4207138FC00DEB19D /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCE8B3207138FC00DEB19D /* HomeDetailView.swift */; };
 		8BDCE8B62071444600DEB19D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCE8B52071444600DEB19D /* CommentView.swift */; };
 		8BDCE8B8207144DE00DEB19D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCE8B7207144DE00DEB19D /* CommentTableViewCell.swift */; };
+		8BDCE8BE207163B300DEB19D /* ItemRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCE8BD207163B300DEB19D /* ItemRealmEntity.swift */; };
+		8BDCE8C02071667700DEB19D /* LocalDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCE8BF2071667700DEB19D /* LocalDatabaseManager.swift */; };
 		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		8BDCE8B3207138FC00DEB19D /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
 		8BDCE8B52071444600DEB19D /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		8BDCE8B7207144DE00DEB19D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		8BDCE8BD207163B300DEB19D /* ItemRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealmEntity.swift; sourceTree = "<group>"; };
+		8BDCE8BF2071667700DEB19D /* LocalDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabaseManager.swift; sourceTree = "<group>"; };
 		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 			children = (
 				8BB456E8206F6D1F005ABD00 /* AuthManager.swift */,
 				8BB45705206FFB8C005ABD00 /* HomeManager.swift */,
+				8BDCE8BF2071667700DEB19D /* LocalDatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB45703206FF9CC005ABD00 /* Item.swift */,
+				8BDCE8BD207163B300DEB19D /* ItemRealmEntity.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				8BB457172070D885005ABD00 /* Date+Extensions.swift in Sources */,
 				8BB456E2206F5527005ABD00 /* LoginView.swift in Sources */,
 				8BB45706206FFB8C005ABD00 /* HomeManager.swift in Sources */,
+				8BDCE8BE207163B300DEB19D /* ItemRealmEntity.swift in Sources */,
 				8BB4570B206FFEA5005ABD00 /* ApiClient.swift in Sources */,
 				8BB456D1206F5299005ABD00 /* BaseViewController.swift in Sources */,
 				8BB456FC206FDF23005ABD00 /* HomeView.swift in Sources */,
@@ -448,6 +455,7 @@
 				8BDCE8B8207144DE00DEB19D /* CommentTableViewCell.swift in Sources */,
 				8BB456F8206FD129005ABD00 /* UIView+Extensions.swift in Sources */,
 				8BDCE8AA2070FE3A00DEB19D /* HomeDetailViewController.swift in Sources */,
+				8BDCE8C02071667700DEB19D /* LocalDatabaseManager.swift in Sources */,
 				8BB456F0206FAFFF005ABD00 /* HomeViewController.swift in Sources */,
 				8BDCE8B02071021700DEB19D /* ArticleViewController.swift in Sources */,
 				8BB456FF206FE91D005ABD00 /* HomeDataProvider.swift in Sources */,

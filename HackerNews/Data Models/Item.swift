@@ -17,6 +17,7 @@ fileprivate struct Keys {
     static let score = "score"
     static let by = "by"
     static let time = "time"
+    static let type = "type"
 }
 
 struct Item {
@@ -28,7 +29,7 @@ struct Item {
     var by: String?
     var time: Date?
     var url: URL?
-    
+    var type: String?
     
     init?(data: [String: Any]) {
         
@@ -40,6 +41,7 @@ struct Item {
         commentIds = data[Keys.kids] as? [Int] ?? []
         score = data[Keys.score] as? Int
         by = data[Keys.by] as? String
+        type = data[Keys.type] as? String
         
         if let urlString = data[Keys.url] as? String {
             url = URL(string: urlString)
@@ -47,6 +49,21 @@ struct Item {
         
         if let _time = data[Keys.time] as? Double {
             time = Date(timeIntervalSince1970: _time)
+        }
+    }
+    
+    init(realmEntity: ItemRealmEntity) {
+        id = realmEntity.id
+        title = realmEntity.title
+        text = realmEntity.text
+        commentIds = realmEntity.commentIds
+        score = realmEntity.score.value
+        by = realmEntity.by
+        type = realmEntity.type
+        time = realmEntity.time
+        
+        if let _urlString = realmEntity.urlString {
+            url = URL(string: _urlString)
         }
     }
 }
