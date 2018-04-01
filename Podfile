@@ -10,4 +10,5 @@ target 'HackerNews' do
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Phone'
   pod 'Alamofire', '~> 4.7'
+  pod 'JGProgressHUD'
 end

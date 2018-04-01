@@ -45,6 +45,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.14)
   - GTMSessionFetcher/Full (1.1.14):
     - GTMSessionFetcher/Core (= 1.1.14)
+  - JGProgressHUD (2.0.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Core
   - FirebaseUI/Phone
   - GoogleSignIn
+  - JGProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
@@ -70,8 +72,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  JGProgressHUD: 63ad7d8850702a91625fb9ed8e94eab706c03d81
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 0a7395731dee4082f8d0e5458a0139f848696e92
+PODFILE CHECKSUM: 1931585b166bdf4c4771e0d264502dd2ba2721de
 
 COCOAPODS: 1.4.0
