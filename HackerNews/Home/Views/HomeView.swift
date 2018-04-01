@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeViewDelegate: class {
     func fetchStories()
-    func didTapNewsItem(item: News)
+    func didTapNewsItem(item: Item)
 }
 
 class HomeView: UIView {

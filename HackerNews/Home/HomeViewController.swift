@@ -73,9 +73,10 @@ extension HomeViewController: HomeViewDelegate {
         }
     }
     
-    func didTapNewsItem(item: News) {
+    func didTapNewsItem(item: Item) {
         let identifier = String(describing: HomeDetailViewController.self)
         guard let homeDetailVC = storyboard?.instantiateViewController(withIdentifier: identifier) as? HomeDetailViewController else { return }
+        homeDetailVC.newsItem = item
         navigationController?.pushViewController(homeDetailVC, animated: true)
     }
 }

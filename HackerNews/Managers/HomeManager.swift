@@ -12,7 +12,11 @@ class HomeManager {
     
     let service = HomeService()
     
-    func fetchTopStories(offsetBy: Int, completion: @escaping ((_ data: [News]?, _ error: Error?) -> Void)) {
+    func fetchTopStories(offsetBy: Int, completion: @escaping ((_ data: [Item]?, _ error: Error?) -> Void)) {
         service.fetchTopStories(lastItem: offsetBy, completion: completion)
+    }
+    
+    func fetchComments(kids: [Int], completion: @escaping ((_ data: [Item]?, _ error: Error?) -> Void)) {
+        service.fetchComments(ids: kids, completion: completion)
     }
 }
