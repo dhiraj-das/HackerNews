@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     private func customizeNavigationBar() {
         navigationController?.navigationBar.barTintColor = .orange
         if let title = title {
-            navigationItem.leftBarButtonItem = UINavigationBar.buttonItem(withTitle: title, subtitle: "nil")
+            navigationItem.leftBarButtonItem = UINavigationBar.buttonItem(withTitle: title, subtitle: "just now")
         }
     }
     

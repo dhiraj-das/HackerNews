@@ -34,6 +34,7 @@
 		8BB4571120701EC2005ABD00 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB4571020701EC2005ABD00 /* ServiceRequest.swift */; };
 		8BB45713207024C3005ABD00 /* TopStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB45712207024C3005ABD00 /* TopStories.swift */; };
 		8BB457172070D885005ABD00 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB457162070D885005ABD00 /* Date+Extensions.swift */; };
+		8BB457192070E36B005ABD00 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB457182070E36B005ABD00 /* String+Extensions.swift */; };
 		F33D0B130C0A3907E8781B6C /* Pods_HackerNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		8BB4571020701EC2005ABD00 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		8BB45712207024C3005ABD00 /* TopStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStories.swift; sourceTree = "<group>"; };
 		8BB457162070D885005ABD00 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		8BB457182070E36B005ABD00 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C0D9893303CF5BD5F2613B1E /* Pods_HackerNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 				8BB456F7206FD129005ABD00 /* UIView+Extensions.swift */,
 				8BB456F9206FDD02005ABD00 /* UINavigationBar+Extensions.swift */,
 				8BB457162070D885005ABD00 /* Date+Extensions.swift */,
+				8BB457182070E36B005ABD00 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				8BB456F5206FD0AC005ABD00 /* NavigationBarTitleView.swift in Sources */,
 				8BB45701206FE9AF005ABD00 /* HomeTableViewCell.swift in Sources */,
 				8BB45704206FF9CC005ABD00 /* News.swift in Sources */,
+				8BB457192070E36B005ABD00 /* String+Extensions.swift in Sources */,
 				8BB4571120701EC2005ABD00 /* ServiceRequest.swift in Sources */,
 				8BB45709206FFBDD005ABD00 /* HomeService.swift in Sources */,
 				8BB456FA206FDD02005ABD00 /* UINavigationBar+Extensions.swift in Sources */,

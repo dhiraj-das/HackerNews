@@ -80,7 +80,7 @@ extension News: HomeTableViewCellRepresentable {
         return by ?? ""
     }
     
-    var description: String {
-        return text ?? ""
+    var description: NSAttributedString {
+        return text?.convertHtml() ?? NSAttributedString()
     }
 }

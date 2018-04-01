@@ -14,7 +14,7 @@ protocol HomeTableViewCellRepresentable {
     var votes: Int { get }
     var datetime: String { get }
     var userName: String { get }
-    var description: String { get }
+    var description: NSAttributedString { get }
     var urlString: String { get }
 }
 
@@ -37,7 +37,7 @@ class HomeTableViewCell: UITableViewCell {
             postTitleLabel.text = data.title
             commentCountLabel.text = "\(data.commentCount)"
             scoreLabel.text = "\(data.votes)"
-            descriptionLabel.text = "\(data.description)"
+            descriptionLabel.attributedText = data.description
             urlLabel.text = data.urlString
             additionalDetailsLabel.text = "\(data.datetime) | \(data.userName)"
         }
