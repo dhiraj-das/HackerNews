@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialBold.ttf">
+            <string>Arial-BoldMT</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationBarTitleView" customModule="HackerNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-Db-rBU" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Stories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHV-2W-rZV" userLabel="Title Label">
+                            <rect key="frame" x="10" y="0.0" width="103.5" height="21.5"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 mins ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIo-yI-xyC">
+                            <rect key="frame" x="10" y="22.5" width="68" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="TIo-yI-xyC" firstAttribute="top" secondItem="xHV-2W-rZV" secondAttribute="bottom" constant="1" id="0G0-f9-MSp"/>
+                        <constraint firstItem="xHV-2W-rZV" firstAttribute="top" secondItem="hIK-Db-rBU" secondAttribute="top" id="9iv-d6-cE2"/>
+                        <constraint firstItem="TIo-yI-xyC" firstAttribute="leading" secondItem="hIK-Db-rBU" secondAttribute="leading" constant="10" id="Mq1-bx-hOM"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TIo-yI-xyC" secondAttribute="bottom" id="ekg-BZ-qzk"/>
+                        <constraint firstItem="xHV-2W-rZV" firstAttribute="leading" secondItem="hIK-Db-rBU" secondAttribute="leading" constant="10" id="lzA-Mv-WLw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hIK-Db-rBU" secondAttribute="trailing" id="agC-Vt-5Fe"/>
+                <constraint firstItem="hIK-Db-rBU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ibR-fT-DyL"/>
+                <constraint firstItem="hIK-Db-rBU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="irJ-DG-F70"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hIK-Db-rBU" secondAttribute="bottom" id="rDQ-Jz-rVB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="TIo-yI-xyC" id="F0L-Xg-RXn"/>
+                <outlet property="titleLabel" destination="xHV-2W-rZV" id="C3W-hf-ta0"/>
+            </connections>
+            <point key="canvasLocation" x="73.5" y="95.5"/>
+        </view>
+    </objects>
+</document>

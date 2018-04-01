@@ -9,5 +9,7 @@ target 'HackerNews' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Phone'
-  
+  pod 'Alamofire', '~> 4.7'
+  pod 'JGProgressHUD'
+  pod 'PagingMenuController', '~> 2.2.0'
 end

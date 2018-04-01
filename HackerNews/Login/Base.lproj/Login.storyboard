@@ -21,21 +21,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2348" y="80.50974512743629"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="mGr-BM-nzt">
             <objects>
@@ -135,12 +120,20 @@
                     <navigationItem key="navigationItem" id="fOk-s5-ZDt"/>
                     <connections>
                         <outlet property="loginView" destination="dQ2-l7-WAw" id="8IB-dL-qdr"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showHome" id="Cgp-sn-AyK"/>
+                        <segue destination="1tx-4c-L4G" kind="show" identifier="showHome" id="UAn-bx-Dkd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb4-dc-BuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1344.8" y="80.50974512743629"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Hcf-eU-CWe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="1tx-4c-L4G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCv-ls-geh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jln-VW-bBf">
