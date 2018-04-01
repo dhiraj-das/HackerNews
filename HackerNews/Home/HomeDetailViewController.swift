@@ -50,6 +50,10 @@ class HomeDetailViewController: BaseViewController {
             if let commentVC = viewController as? CommentViewController {
                 commentVC.commentIds = newsItem?.commentIds
             }
+            
+            if let articleVC = viewController as? ArticleViewController {
+                articleVC.url = newsItem?.url
+            }
         }
     }
     

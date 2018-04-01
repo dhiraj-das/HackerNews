@@ -10,10 +10,17 @@ import UIKit
 
 class ArticleViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var webview: UIWebView!
+    
+    var url: URL? {
+        didSet {
+            loadURL()
+        }
     }
 
+    private func loadURL() {
+        guard let _url = url else { return }
+        let urlRequest = URLRequest(url: _url)
+        webview.loadRequest(urlRequest)
+    }
 }
