@@ -9,6 +9,7 @@
 import UIKit
 
 protocol HomeTableViewCellRepresentable {
+    var id: Int { get }
     var title: String { get }
     var commentCount: Int { get }
     var votes: Int { get }
@@ -16,6 +17,10 @@ protocol HomeTableViewCellRepresentable {
     var userName: String { get }
     var description: NSAttributedString { get }
     var urlString: String { get }
+}
+
+protocol HomeTableViewCellDelegate: class {
+    func didTapOnComment(id: Int)
 }
 
 class HomeTableViewCell: UITableViewCell {
@@ -26,11 +31,13 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var additionalDetailsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var commentImageView: UIImageView!
     
     struct Dimensions {
         static let cellHeight: CGFloat = 110.0
     }
     
+    weak var delegate: HomeTableViewCellDelegate?
     var cellData: HomeTableViewCellRepresentable? {
         didSet {
             guard let data = cellData else { return }
@@ -46,11 +53,17 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         nullifyLabels()
+        addTapGestureToCommentImageView()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         nullifyLabels()
+    }
+    
+    private func addTapGestureToCommentImageView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SELCommentTapped(sender:)))
+        commentImageView.addGestureRecognizer(tapGesture)
     }
 
     private func nullifyLabels() {
@@ -60,5 +73,10 @@ class HomeTableViewCell: UITableViewCell {
         additionalDetailsLabel.text = nil
         descriptionLabel.text = nil
     }
-
+    
+    @objc private func SELCommentTapped(sender: Any) {
+        guard let data = cellData else { return }
+        delegate?.didTapOnComment(id: data.id)
+    }
+    
 }

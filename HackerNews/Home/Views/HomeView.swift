@@ -46,6 +46,7 @@ extension HomeView: UITableViewDataSource {
         let cellIdentifier = String(describing: HomeTableViewCell.self)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
             as? HomeTableViewCell else { return HomeTableViewCell() }
+        cell.delegate = self
         cell.cellData = dataprovider?.items[indexPath.row]
         return cell
     }
@@ -71,5 +72,11 @@ extension HomeView: UIScrollViewDelegate {
         if rowIndex > _dataprovider.items.count - 20 {
             delegate?.fetchStories()
         }
+    }
+}
+
+extension HomeView: HomeTableViewCellDelegate {
+    func didTapOnComment(id: Int) {
+        //TODO: Handle this.
     }
 }

@@ -51,6 +51,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PagingMenuController (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - FirebaseUI/Phone
   - GoogleSignIn
   - JGProgressHUD
+  - PagingMenuController (~> 2.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
@@ -74,7 +76,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   JGProgressHUD: 63ad7d8850702a91625fb9ed8e94eab706c03d81
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
 
-PODFILE CHECKSUM: 1931585b166bdf4c4771e0d264502dd2ba2721de
+PODFILE CHECKSUM: 7f4e6904e9d7414e5d2aa9a5d50bd3c53236fbec
 
 COCOAPODS: 1.4.0
