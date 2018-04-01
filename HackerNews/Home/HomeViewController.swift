@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class HomeViewController: UIViewController {
 
     @IBOutlet var homeView: HomeView!
     private let manager = HomeManager()
     private var isFetching: Bool = false
+    private lazy var progressHud = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,9 @@ class HomeViewController: UIViewController {
     }
     
     private func fetchTopStories() {
+        progressHud.show(in: self.view)
         manager.fetchTopStories(offsetBy: 0) { (news, error) in
+            self.progressHud.dismiss()
             guard error == nil else {
                 //TODO: Show alert
                 return
