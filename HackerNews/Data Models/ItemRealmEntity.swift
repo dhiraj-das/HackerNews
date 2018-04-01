@@ -14,12 +14,12 @@ class ItemRealmEntity: Object {
     @objc dynamic var id: Int = 0
     @objc dynamic var title: String?
     @objc dynamic var text: String?
-    @objc dynamic var commentIds: [Int] = []
     @objc dynamic var by: String?
     @objc dynamic var time: Date?
     @objc dynamic var urlString: String?
     @objc dynamic var type: String?
     let score = RealmOptional<Int>()
+    let commentIds = List<Int>()
     
     override static func primaryKey() -> String? {
         return "id"
@@ -29,7 +29,7 @@ class ItemRealmEntity: Object {
         super.init()
         id = item.id
         by = item.by
-        commentIds = item.commentIds
+        commentIds.append(objectsIn: item.commentIds)
         score.value = item.score
         text = item.text
         time = item.time

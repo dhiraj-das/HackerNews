@@ -56,11 +56,11 @@ struct Item {
         id = realmEntity.id
         title = realmEntity.title
         text = realmEntity.text
-        commentIds = realmEntity.commentIds
         score = realmEntity.score.value
         by = realmEntity.by
         type = realmEntity.type
         time = realmEntity.time
+        commentIds = realmEntity.commentIds.map({ $0 })
         
         if let _urlString = realmEntity.urlString {
             url = URL(string: _urlString)

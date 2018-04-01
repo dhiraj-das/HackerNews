@@ -31,7 +31,7 @@ class LocalDatabaseManager {
     func storeTopStories(items: [Item]) {
         let entities = items.map {ItemRealmEntity(item: $0)}
         realm.beginWrite()
-        realm.add(entities)
+        realm.add(entities, update: true)
         try? realm.commitWrite()
     }
 }

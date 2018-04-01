@@ -13,13 +13,14 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var homeView: HomeView!
     private let manager = HomeManager()
+    private let databaseManager = LocalDatabaseManager.shared
     private var isFetching: Bool = false
     private lazy var progressHud = JGProgressHUD(style: .dark)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView.delegate = self
-        fetchTopStories()
+        fetchCachedData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,9 +28,21 @@ class HomeViewController: UIViewController {
         customizeNavigationBar()
     }
     
-    private func fetchTopStories() {
-        progressHud.show(in: self.view)
-        manager.fetchTopStories(offsetBy: 0) { (news, error) in
+    private func fetchCachedData() {
+        let topStories = databaseManager.fetchTopStories()
+        if topStories.count > 0 {
+            homeView.dataprovider = HomeDataProvider(news: topStories)
+            fetchTopStories(showLoadingIndicator: false)
+            return
+        }
+        fetchTopStories()
+    }
+    
+    private func fetchTopStories(showLoadingIndicator: Bool = true) {
+        if showLoadingIndicator {
+            progressHud.show(in: self.view)
+        }
+        manager.fetchTopStories(offsetBy: homeView.dataprovider?.items.count ?? 0) { (news, error) in
             self.progressHud.dismiss()
             guard error == nil else {
                 //TODO: Show alert
@@ -39,6 +52,7 @@ class HomeViewController: UIViewController {
                 //TODO: Show alert
                 return
             }
+            self.databaseManager.storeTopStories(items: _news)
             self.homeView.dataprovider = HomeDataProvider(news: _news)
         }
     }
